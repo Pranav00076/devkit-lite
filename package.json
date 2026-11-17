@@ -1,0 +1,44 @@
+{
+  "name": "devkit-lite",
+  "version": "0.1.0",
+  "description": "Tiny Node.js dev utilities: TCP port checks and a slugify helper. Zero dependencies.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "port",
+    "tcp",
+    "find-free-port",
+    "is-port-free",
+    "wait-for-port",
+    "slugify",
+    "slug",
+    "utils",
+    "devkit",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "sideEffects": false,
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
