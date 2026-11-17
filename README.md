@@ -1,4 +1,4 @@
-# devkit-lite
+# portslug
 
 Tiny Node.js dev utilities: TCP port checks and a slugify helper.
 Zero runtime dependencies, ES modules, Node.js 18+.
@@ -6,7 +6,7 @@ Zero runtime dependencies, ES modules, Node.js 18+.
 ## Installation
 
 ```bash
-npm install devkit-lite
+npm install portslug
 ```
 
 ## API
@@ -18,7 +18,7 @@ The package exports exactly five functions.
 Returns `true` if the TCP port can be bound on `host`.
 
 ```js
-import { isPortFree } from "devkit-lite";
+import { isPortFree } from "portslug";
 await isPortFree(3000); // true or false
 ```
 
@@ -27,7 +27,7 @@ await isPortFree(3000); // true or false
 Returns `true` if the TCP port is occupied on `host`.
 
 ```js
-import { isPortInUse } from "devkit-lite";
+import { isPortInUse } from "portslug";
 await isPortInUse(3000); // true or false
 ```
 
@@ -36,7 +36,7 @@ await isPortInUse(3000); // true or false
 Returns the first available port starting at `startPort` (inclusive). Throws if no port is free up to 65535.
 
 ```js
-import { findFreePort } from "devkit-lite";
+import { findFreePort } from "portslug";
 const port = await findFreePort(3000); // e.g. 3000, or the next free port
 ```
 
@@ -45,7 +45,7 @@ const port = await findFreePort(3000); // e.g. 3000, or the next free port
 Resolves once a TCP server is accepting connections on `port`. Options: `host` (default `"127.0.0.1"`), `timeout` (default `10000` ms), `interval` (default `250` ms). Rejects with a descriptive error if the timeout expires.
 
 ```js
-import { waitForPort } from "devkit-lite";
+import { waitForPort } from "portslug";
 await waitForPort(3000, { timeout: 5000, interval: 100 }); // resolves, or rejects on timeout
 ```
 
@@ -54,7 +54,7 @@ await waitForPort(3000, { timeout: 5000, interval: 100 }); // resolves, or rejec
 Converts text into a URL-friendly slug: lowercases, normalizes Unicode, replaces spaces with hyphens, removes special characters, collapses and trims hyphens.
 
 ```js
-import { slugify } from "devkit-lite";
+import { slugify } from "portslug";
 slugify("Hello World!");      // "hello-world"
 slugify("Café  Crème & Co."); // "cafe-creme-co"
 ```
@@ -62,7 +62,7 @@ slugify("Café  Crème & Co."); // "cafe-creme-co"
 ## Example
 
 ```js
-import { findFreePort, waitForPort, slugify } from "devkit-lite";
+import { findFreePort, waitForPort, slugify } from "portslug";
 
 const port = await findFreePort(3000);
 startMyServer(port);          // your own server
