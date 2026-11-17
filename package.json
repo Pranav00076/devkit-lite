@@ -40,5 +40,10 @@
   "sideEffects": false,
   "devDependencies": {
     "vitest": "^3.2.4"
+  },
+  "homepage": "https://portslug.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pranav00076/devkit-lite"
   }
 }
