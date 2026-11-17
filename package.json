@@ -1,5 +1,5 @@
 {
-  "name": "devkit-lite",
+  "name": "portslug",
   "version": "0.1.0",
   "description": "Tiny Node.js dev utilities: TCP port checks and a slugify helper. Zero dependencies.",
   "type": "module",
